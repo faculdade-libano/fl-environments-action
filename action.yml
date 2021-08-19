@@ -1,0 +1,55 @@
+inputs:
+  action:
+    description: |-
+      It configures what should be performed by this action.
+      By default this action will split an input chunk.
+    required: false
+    default: write
+
+  token:
+    description: |-
+      Token with permission to create secrets in an organization.
+      Check if this token grants access to the scopes: (WRITE:ORG)
+      (SECURITY_EVENTS) (WRITE:PUBLIC_KEY)
+    required: false
+
+  glob:
+    description: |-
+      File pattern.
+    required: false
+    default: "*/*.+(json|ts|env)"
+
+  org:
+    description: |-
+      Name of the organization.
+    required: false
+
+  base:
+    description: |-
+      Base directory name.
+    required: false
+
+  chunk:
+    description: |-
+      The value that was previously stored in secrets by this action.
+    required: false
+
+  environment:
+    description: |-
+      The environment in which this action is running.
+      Optionally, you can use the branch name.
+    required: true
+
+  visibility:
+    description: |-
+      Defines the visibility of a secret in the organization.
+    required: false
+    default: private
+
+outputs:
+  content:
+    description: Contains the retrieved file.
+
+runs:
+  using: node12
+  main: dist/index.js
