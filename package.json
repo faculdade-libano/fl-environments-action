@@ -1,5 +1,5 @@
 {
-    "name": "es-environments-action",
+    "name": "fl-environments-action",
     "version": "1.0.0",
     "private": true,
     "description": "Automate environment setup",
