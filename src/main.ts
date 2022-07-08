@@ -14,21 +14,17 @@
  * limitations under the License.
  */
 
-import { getInput, setFailed } from '@actions/core';
-import ActionManager from './managers/action.manager';
+import { getInput, setFailed } from "@actions/core";
+import ActionManager from "./managers/action.manager";
 
 async function run(): Promise<void> {
-    try {
-
-        const action: string = getInput("action");
-        const actionManager = new ActionManager();
-        actionManager.runAction(action);
-
-    } catch (error) {
-
-        setFailed(error.message);
-
-    }
+  try {
+    const action: string = getInput("action");
+    const actionManager = new ActionManager();
+    actionManager.runAction(action);
+  } catch (error) {
+    setFailed(error.message);
+  }
 }
-  
+
 run();
