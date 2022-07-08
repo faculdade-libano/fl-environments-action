@@ -13,14 +13,14 @@
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/envio-simples/es-environments-action.git"
+        "url": "git+https://github.com/faculdade-libano/fl-environments-action.git"
     },
     "keywords": [
         "actions",
         "secrets",
         "environment"
     ],
-    "author": "Envio Simples",
+    "author": "Faculdade Libano",
     "license": "Apache-2.0",
     "dependencies": {
         "@actions/core": "^1.4.0",
@@ -38,6 +38,7 @@
         "@vercel/ncc": "^0.29.0",
         "eslint": "^7.31.0",
         "eslint-plugin-github": "^4.1.1",
+        "eslint-plugin-react": "^7.30.1",
         "prettier": "2.2.1",
         "typescript": "^4.1.3"
     }
